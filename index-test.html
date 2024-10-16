@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<title>InstallFromSource - Lighttpd - lighty labs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Redmine" />
+<meta name="keywords" content="issue,bug,tracker" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Cy49effdjkp+G1V7HTJDehXzO8/dF3sQvUut6cpB2rcrYSlQpFS667PJvZATaRJZMeMb3bpKw/ToMizwdmVgTA==" />
+<link rel='shortcut icon' href='/favicon.ico?1366732741' />
+<link rel="stylesheet" media="all" href="/stylesheets/jquery/jquery-ui-1.13.2.css?1687790007" />
+<link rel="stylesheet" media="all" href="/stylesheets/tribute-5.1.3.css?1601114554" />
+<link rel="stylesheet" media="all" href="/themes/alternate-dark/stylesheets/application.css?1602416247" />
+<link rel="stylesheet" media="all" href="/stylesheets/responsive.css?1700738256" />
+
+<script src="/javascripts/jquery-3.6.1-ui-1.13.2-ujs-6.1.7.6.js?1708856876"></script>
+<script src="/javascripts/tribute-5.1.3.min.js?1601114554"></script>
+<script src="/javascripts/tablesort-5.2.1.min.js?1601114554"></script>
+<script src="/javascripts/tablesort-5.2.1.number.min.js?1601114554"></script>
+<script src="/javascripts/application.js?1700738256"></script>
+<script src="/javascripts/responsive.js?1700738256"></script>
+<script>
+//<![CDATA[
+$(window).on('load', function(){ warnLeavingUnsaved('The current page contains unsaved text that will be lost if you leave this page.'); });
+//]]>
+</script>
+
+<script>
+//<![CDATA[
+rm = window.rm || {};rm.AutoComplete = rm.AutoComplete || {};rm.AutoComplete.dataSources = JSON.parse('{"issues":"/issues/auto_complete?project_id=lighttpd\u0026q=","wiki_pages":"/wiki_pages/auto_complete?project_id=lighttpd\u0026q="}');
+//]]>
+</script>
+
+<!-- page specific tags -->
+
+</head>
+<body class="theme-Alternate-dark project-lighttpd has-main-menu controller-wiki action-show avatars-off">
+
+<div id="wrapper">
+
+<div class="flyout-menu js-flyout-menu">
+
+        <div class="flyout-menu__search">
+            <form action="/projects/lighttpd/search" accept-charset="UTF-8" name="form-86548ca7" method="get"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
+            <input type="hidden" name="wiki_pages" value="1" autocomplete="off" />
+            <label class="search-magnifier search-magnifier--flyout" for="flyout-search">&#9906;</label>
+            <input type="text" name="q" id="flyout-search" class="small js-search-input" placeholder="Search" />
+</form>        </div>
+
+
+        <h3>Project</h3>
+        <span class="js-project-menu"></span>
+
+    <h3>General</h3>
+    <span class="js-general-menu"></span>
+
+    <span class="js-sidebar flyout-menu__sidebar"></span>
+
+    <h3>Profile</h3>
+    <span class="js-profile-menu"></span>
+
+</div>
+
+
+<div id="top-menu">
+    <div id="account">
+        <ul><li><a class="login" href="/login">Sign in</a></li><li><a class="register" href="/account/register">Register</a></li></ul>    </div>
+    
+    <ul><li><a class="home" href="/">Home</a></li><li><a class="projects" href="/projects">Projects</a></li><li><a class="paypal-donate" href="/paypal_donation">Donate</a></li><li><a target="_blank" rel="noopener" class="help" href="https://www.redmine.org/guide">Help</a></li></ul></div>
+
+<div id="header">
+
+    <a href="#" class="mobile-toggle-button js-flyout-menu-toggle-button"></a>
+
+    <div id="quick-search">
+        <form action="/projects/lighttpd/search" accept-charset="UTF-8" name="form-5a3edb3e" method="get"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" />
+        <input type="hidden" name="scope" value="subprojects" autocomplete="off" />
+        <input type="hidden" name="wiki_pages" value="1" autocomplete="off" />
+        <label for='q'>
+          <a accesskey="4" href="/projects/lighttpd/search?scope=subprojects">Search</a>:
+        </label>
+        <input type="text" name="q" id="q" size="20" class="small" accesskey="f" data-auto-complete="true" />
+</form>        <div id="project-jump" class="drdn"><span class="drdn-trigger">Lighttpd</span><div class="drdn-content"><div class="quick-search"><input type="text" name="q" id="projects-quick-search" value="" class="autocomplete" data-automcomplete-url="/projects/autocomplete.js?jump=wiki" autocomplete="off" /></div><div class="drdn-items projects selection"></div><div class="drdn-items all-projects selection"><a href="/projects?jump=wiki">All Projects</a></div></div></div>
+    </div>
+
+    <h1><span class="current-project">Lighttpd</span></h1>
+
+    <div id="main-menu" class="tabs">
+        <ul><li><a class="overview" href="/projects/lighttpd">Overview</a></li><li><a class="activity" href="/projects/lighttpd/activity">Activity</a></li><li><a class="roadmap" href="/projects/lighttpd/roadmap">Roadmap</a></li><li><a class="issues" href="/projects/lighttpd/issues">Issues</a></li><li><a class="news" href="/projects/lighttpd/news">News</a></li><li><a class="wiki selected" href="/projects/lighttpd/wiki">Wiki</a></li><li><a class="boards" href="/projects/lighttpd/boards">Forums</a></li><li><a class="repository" href="/projects/lighttpd/repository">Repository</a></li><li><a class="tab0" href="//www.lighttpd.net">Blog</a></li><li><a class="tab1" href="//blog.lighttpd.net">Developer Blog</a></li></ul>
+        <div class="tabs-buttons" style="display:none;">
+            <button class="tab-left" onclick="moveTabLeft(this); return false;"></button>
+            <button class="tab-right" onclick="moveTabRight(this); return false;"></button>
+        </div>
+    </div>
+</div>
+
+<div id="main" class="">
+    <div id="sidebar">
+          
+
+<h3>Wiki</h3>
+<ul>
+  <li><a href="/projects/lighttpd/wiki">Start page</a></li>
+  <li><a href="/projects/lighttpd/wiki/index">Index by title</a></li>
+  <li><a href="/projects/lighttpd/wiki/date_index">Index by date</a></li>
+</ul>
+
+
+
+
+        <br /><br /><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="S5M73CRHD873U">
+<input type="image" src="/images/paypal/button_0.png" border="0" name="submit" alt="PayPal">
+</form>
+<br />
+    </div>
+
+    <div id="content">
+        
+        <div class="contextual">
+
+  
+  
+
+  <span class="drdn"><span class="drdn-trigger"><span class="icon-only icon-actions" title="Actions">Actions</span></span><div class="drdn-content"><div class="drdn-items">
+    <a class="icon icon-history" href="/projects/lighttpd/wiki/InstallFromSource/history">History</a>
+
+      
+      
+      
+      
+
+</div></div></span></div>
+
+<p class="breadcrumb"><a href="/projects/lighttpd/wiki/Devel">Devel</a> » </p>
+
+
+<div class="wiki wiki-page">
+  <ul class="toc right"><li><strong>Table of contents</strong></li><li><a href="#InstallFromSource">InstallFromSource</a><ul><li><a href="#source-browser">source browser</a></li><li><a href="#source-checkout">source checkout</a></li><li><a href="#build-prerequisites">build prerequisites</a></li><li><a href="#build-commands-examples">build commands (examples)</a></li><li><a href="#cross-compiling">cross-compiling</a></li><li><a href="#distro-packaging-external-examples">distro packaging (external examples)</a></li><li><a href="#running-lighttpd-from-build-tree">running lighttpd from build tree</a></li><li><a href="#signals">signals</a></li><li><a href="#graceful-restart">graceful restart</a></li><li><a href="#initscripts">initscripts</a></li><li><a href="#supervise">supervise</a></li><li><a href="#xinetd">xinetd</a></li><li><a href="#netcat">netcat</a></li><li><a href="#shell-pipeline">shell pipeline</a></li></ul></li></ul>
+
+
+	<a name="InstallFromSource"></a>
+<h2 >InstallFromSource<a href="#InstallFromSource" class="wiki-anchor">&para;</a></h2>
+
+
+	<a name="source-browser"></a>
+<h3 >source browser<a href="#source-browser" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>View source code in the <a href="//git.lighttpd.net/lighttpd/lighttpd1.4.git">lighttpd 1.4 git repository</a></p>
+
+
+	<a name="source-checkout"></a>
+<h3 >source checkout<a href="#source-checkout" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>There are multiple options to obtain a lighttpd source tree.  git is recommended.</p>
+
+
+	<ul>
+	<li>git: (recommended)<br />read-only: <code>$ git clone https://git.lighttpd.net/lighttpd/lighttpd1.4.git</code><br />developer: <code>$ git clone git+ssh://git@lighttpd.net/lighttpd/lighttpd1.4.git</code><br /><pre>
+# initial checkout
+git clone https://git.lighttpd.net/lighttpd/lighttpd1.4.git
+cd lighttpd1.4
+# subsequent updates (to obtain latest source)
+#cd lighttpd1.4
+git pull
+</pre></li>
+		<li>svn: (alternative to git)<br /><pre>
+# initial checkout
+svn checkout https://github.com/lighttpd/lighttpd1.4/trunk lighttpd1.4
+cd lighttpd1.4
+# subsequent updates (to obtain latest source)
+#cd lighttpd1.4
+svn update
+</pre></li>
+		<li>source release/snapshot<br /><a class="external" href="https://download.lighttpd.net/lighttpd/">https://download.lighttpd.net/lighttpd/</a><br /><pre>
+# download and extract tarball
+latest=$(curl -s https://download.lighttpd.net/lighttpd/releases-1.4.x/latest.txt)
+curl -o "$latest.tar.xz" https://download.lighttpd.net/lighttpd/releases-1.4.x/"$latest.tar.xz" 
+tar -xJf "$latest.tar.xz" 
+cd $latest
+</pre></li>
+	</ul>
+
+
+	<a name="build-prerequisites"></a>
+<h3 >build prerequisites<a href="#build-prerequisites" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>lighttpd supports multiple build frameworks: automake, cmake, meson, and scons.</p>
+
+
+Ensure you have installed the latest development tools and packages available, e.g. for automake:
+	<ul>
+	<li>autoconf</li>
+		<li>automake</li>
+		<li>libtool</li>
+		<li>m4</li>
+	</ul>
+
+
+A minimal lighttpd build typically leverages PCRE and pkg-config 
+	<ul>
+	<li>pcre-devel / libpcre3-dev</li>
+		<li>pkg-config</li>
+	</ul>
+
+
+Optional lighttpd modules may require one or more additional libraries, e.g. choices among TLS modules
+	<ul>
+	<li>openssl</li>
+		<li>gnutls</li>
+		<li>mbedtls</li>
+		<li>nss</li>
+		<li>wolfssl</li>
+	</ul>
+
+
+	<p>Further details can be found in <a href="//git.lighttpd.net/lighttpd/lighttpd1.4/src/branch/master/INSTALL">lighttpd INSTALL</a>  <strong>(Please read)</strong><br />Depending on which features you want, other development libraries may be needed: <a class="wiki-page" href="/projects/lighttpd/wiki/OptionalLibraries">OptionalLibraries</a><br />On most systems you need to install the development version of the library packages; the library itself will not be enough!<br />On debian you can also use apt-get to install all lighttpd build dependencies: <code>apt-get build-dep lighttpd</code></p>
+
+
+	<a name="build-commands-examples"></a>
+<h3 >build commands (examples)<a href="#build-commands-examples" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>automake<br /><pre>
+#cd lighttpd1.4
+./autogen.sh
+./configure -C --prefix=/usr/local  # ./configure --help for additional options
+make -j 4
+make check
+#sudo make install
+</pre><br />cmake<br /><pre>
+#cd lighttpd1.4
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local -Wno-dev .
+make -j 4
+make test
+#sudo make install
+</pre><br />meson<br /><pre>
+#cd lighttpd1.4
+meson setup --buildtype debugoptimized --prefix /usr/local build
+cd build
+meson compile
+meson test
+#sudo meson install
+</pre><br />scons<br /><pre>
+#cd lighttpd1.4
+scons -j 4 build_static=1 build_dynamic=0 prefix=/usr/local
+#sudo scons -j 4 build_static=1 build_dynamic=0 prefix=/usr/local install
+</pre><br />Examples commands for more fully-featured builds might reference <a href="//git.lighttpd.net/lighttpd/lighttpd1.4/src/branch/master/scripts/ci-build.sh">lighttpd scripts/ci-build.sh</a><br />Also, there are more options for <a class="wiki-page" href="/projects/lighttpd/wiki/RunningUnitTests">running unit tests</a></p>
+
+
+	<a name="cross-compiling"></a>
+<h3 >cross-compiling<a href="#cross-compiling" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>automake help: <code>./configure --help</code><br />automake example: <code>./configure --build=arm-linux --host=x86_64-pc-linux-gnu --prefix=/usr/local --disable-static --enable-shared</code></p>
+
+
+	<p><a href="https://www.pierreblazquez.com/2021/07/13/how-to-build-lighttpd-for-ios-on-arm64/" class="external">How-To: build lighttpd for iOS on arm64</a></p>
+
+
+	<a name="distro-packaging-external-examples"></a>
+<h3 >distro packaging (external examples)<a href="#distro-packaging-external-examples" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Debian: <a href="https://salsa.debian.org/debian/lighttpd/-/blob/master/debian/control" class="external">debian/control</a><br />Fedora: <a href="https://src.fedoraproject.org/rpms/lighttpd/blob/rawhide/f/lighttpd.spec" class="external">lighttpd.spec</a><br />OpenWRT: <a href="https://github.com/openwrt/packages/blob/master/net/lighttpd/Makefile" class="external">net/lighttpd/Makefile</a></p>
+
+
+	<p>Debian: current packages: <a class="external" href="https://debian.lighttpd.net/">https://debian.lighttpd.net/</a><br />Debian: build package for older Debian systems using Debian `dpkg-buildpackage`<br />(The commands below assume that debian/changelog matches the latest lighttpd release.  Change <code>$release</code> as appropriate.)<br /><pre>
+release=$(curl -s https://download.lighttpd.net/lighttpd/releases-1.4.x/latest.txt)
+release=${release#*-}
+wget https://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-$release.tar.xz
+mv lighttpd-$release.tar.xz lighttpd_$release.orig.tar.xz
+git clone https://salsa.debian.org/debian/lighttpd.git
+cd lighttpd/
+# For older Debian releases: head -1 debian/changelog
+# For older Debian releases: git checkout debian/1.4.76-1
+# For older Debian releases: edit top line of debian/changelog to match top line from `head -1 debian/changelog` above
+dpkg-buildpackage -uc -us
+cd ..
+ls lighttpd*_$release*.deb
+# dpkg -i ...
+</pre><br />To build on older Debian releases without <code>debputy</code>, checkout an older tag from salsa.debian.org/debian/lighttpd.git, then modify the top line of debian/changelog to match the <code>$release</code> version</p>
+
+
+	<a name="running-lighttpd-from-build-tree"></a>
+<h3 >running lighttpd from build tree<a href="#running-lighttpd-from-build-tree" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>lighttpd can be run from the build tree, without needing to install it.  This is useful for testing.  In the shell in which you built lighttpd, chdir to the top of the source tree (if not already there).<br />Create a basic lighttpd.conf to listen on localhost port 8080 and serve files from <code>/tmp</code> (not recommended for production use!):<br /><pre>
+server.document-root = "/tmp" 
+server.bind = "127.0.0.1" 
+server.port = 8080
+mimetype.assign = (".txt" =&gt; "text/plain", ".html" =&gt; "text/html" )
+</pre><br />Create a simple file to serve: <code>echo "Hello World!" > /tmp/hello.txt</code><br />Run lighttpd in the foreground: <code>src/lighttpd -D -f lighttpd.conf -m $PWD/src/.libs</code><br />In a different shell: <code>curl http://127.0.0.1:8080/hello.txt</code><br />In the shell running lighttpd, press press <code>Ctrl-C</code> to cause lighttpd to exit.</p>
+
+
+	<p>Since lighttpd 1.4.60, the lighttpd config can optionally be specified on stdin (though incompatible with one-shot mode (<code>-1</code>))<br /><code>echo -e 'server.document-root="/tmp"\n server.port=8080' | src/lighttpd -D -m $PWD/src/.libs -f -</code></p>
+
+
+	<p>Since lighttpd 1.4.70, a shell HERE doc can optionally be used to specify the lighttpd config<br /><pre>
+src/lighttpd -D -m $PWD/src/.libs -f &lt;(cat &lt;&lt;END
+server.document-root = "/tmp" 
+server.port = 8080
+END
+)
+</pre></p>
+
+
+	<a name="signals"></a>
+<h3 >signals<a href="#signals" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>lighttpd responds to the following signals:</p>
+
+
+	<ul>
+	<li>SIGTERM - shut down immediately (terminate existing connections, then exit)</li>
+		<li>SIGINT  - shut down gracefully  (serve existing connections, then exit)</li>
+		<li>SIGUSR1 - reload gracefully     (serve existing connections, then reload config)</li>
+		<li>SIGHUP  - re-open log files     (NOTE: does not reload lighttpd configuration)</li>
+	</ul>
+
+
+	<p>(Note: SIGUSR1 behavior is available in lighttpd 1.4.46 and later)</p>
+
+
+	<a name="graceful-restart"></a>
+<h3 >graceful restart<a href="#graceful-restart" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>With lighttpd 1.4.46 and later, SIGUSR1 is the recommended method to gracefully handle configuration reloads, though a graceful stop and then restart of lighttpd is still required for lighttpd configurations which chroot.</p>
+
+
+	<p>With lighttpd 1.4.56 and later, graceful restart can have a time limit applied to existing active connections before the server reloads the config: (<a class="wiki-page" href="/projects/lighttpd/wiki/Server_feature-flagsDetails">server.feature-flags</a>)<br /><code>server.feature-flags = ( "server.graceful-shutdown-timeout" => 5 )</code><br />In some configurations, lighttpd can immediately restart, while a forked copy of the server continued to serve existing connections (YMMV):<br /><code>server.feature-flags = ( "server.graceful-shutdown-timeout" => 5, "server.graceful-restart-bg" => "enable" )</code><br /><code>server.systemd-socket-activation = "enable"</code></p>
+
+
+	<p>archive: older article from 2005 talks about graceful restart using SIGINT: <a class="external" href="https://blog.lighttpd.net/articles/2005/09/02/graceful-restart/">https://blog.lighttpd.net/articles/2005/09/02/graceful-restart/</a></p>
+
+
+	<a name="initscripts"></a>
+<h3 >initscripts<a href="#initscripts" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>Depending on the operating system and distribution brand, there are many ways to set up lighttpd to run as a daemon when the system starts up, and to send signals to lighttpd for start/stop/restart/etc.  Rather than attempting to maintain scripts for an unknown number of distros, here are links to a few, which can be used as examples.</p>
+
+
+	<ul>
+	<li>Arch: <a class="external" href="https://github.com/archlinux/svntogit-packages/tree/packages/lighttpd/trunk">https://github.com/archlinux/svntogit-packages/tree/packages/lighttpd/trunk</a></li>
+		<li>Debian: <a class="external" href="https://salsa.debian.org/debian/lighttpd">https://salsa.debian.org/debian/lighttpd</a></li>
+		<li>Fedora: <a class="external" href="https://src.fedoraproject.org/rpms/lighttpd/tree/rawhide">https://src.fedoraproject.org/rpms/lighttpd/tree/rawhide</a></li>
+		<li>FreeBSD: <a class="external" href="https://cgit.freebsd.org/ports/tree/www/lighttpd">https://cgit.freebsd.org/ports/tree/www/lighttpd</a></li>
+		<li>Gentoo: <a class="external" href="https://gitweb.gentoo.org/repo/gentoo.git/tree/www-servers/lighttpd/">https://gitweb.gentoo.org/repo/gentoo.git/tree/www-servers/lighttpd/</a></li>
+		<li>openSUSE: <a class="external" href="https://build.opensuse.org/package/show/server:http/lighttpd">https://build.opensuse.org/package/show/server:http/lighttpd</a></li>
+		<li>OpenWRT: <a class="external" href="https://github.com/openwrt/packages/tree/master/net/lighttpd">https://github.com/openwrt/packages/tree/master/net/lighttpd</a></li>
+	</ul>
+
+
+	<p>sample systemd unit script <a href="https://git.lighttpd.net/lighttpd/lighttpd1.4/src/branch/master/doc/systemd/lighttpd.service" class="external">lighttpd.service</a></p>
+
+
+	<a name="supervise"></a>
+<h3 >supervise<a href="#supervise" class="wiki-anchor">&para;</a></h3>
+
+
+	<p>As an alternative to init scripts you can setup a "supervised" lighttpd with daemontools or runit, see <a class="wiki-page" href="/projects/lighttpd/wiki/LighttpdUnderSupervise">LighttpdUnderSupervise</a></p>
+
+
+	<a name="xinetd"></a>
+<h3 >xinetd<a href="#xinetd" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Run lighttpd from xinetd, and have lighttpd continue accepting connections, exiting after lighttpd is idle for 10 minutes.<br />  /etc/lighttpd/lighttpd.conf (sample)<br />  <pre>
+server.document-root = "/var/www" 
+server.bind = "/dev/stdin" 
+</pre><br />  /etc/xinetd.d/lighttpd (sample)<br />  <pre>
+service lighttpd
+{
+        socket_type  = stream
+        protocol     = tcp
+        port         = 80
+        type         = http
+        wait         = yes
+        user         = lighttpd
+        server       = /usr/sbin/lighttpd
+        server_args  = -D -f /etc/lighttpd/lighttpd.conf -i 600
+}
+</pre></li>
+	</ul>
+
+
+	<ul>
+	<li>Run lighttpd from xinetd, and have lighttpd serve a single connection, including keep-alive requests, and then exit.<br />  /etc/lighttpd/lighttpd.conf (sample)<br />  <pre>server.document-root = "/var/www"</pre><br />  /etc/xinetd.d/lighttpd (sample)<br />  <pre>
+service lighttpd
+{
+        socket_type  = stream
+        protocol     = tcp
+        port         = 80
+        type         = http
+        wait         = no
+        user         = lighttpd
+        server       = /usr/sbin/lighttpd
+        server_args  = -D -f /etc/lighttpd/lighttpd.conf -1
+}       
+</pre></li>
+	</ul>
+
+
+	<a name="netcat"></a>
+<h3 >netcat<a href="#netcat" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Run lighttpd via netcat or ncat or nc<br />  /etc/lighttpd/lighttpd.conf (sample)<br />  <code>server.document-root = "/var/www"</code><br />  netcat command<br />  <code>ncat -l 8080 -e "/usr/sbin/lighttpd -D -f /etc/lighttpd/lighttpd.conf -1"</code></li>
+	</ul>
+
+
+	<a name="shell-pipeline"></a>
+<h3 >shell pipeline<a href="#shell-pipeline" class="wiki-anchor">&para;</a></h3>
+
+
+	<ul>
+	<li>Run lighttpd in shell pipeline<br />  /etc/lighttpd/lighttpd.conf (sample)<br />  <code>server.document-root = "/var/www"</code><br />  shell pipeline of one or more requests<br />  <code>printf "GET /index.txt HTTP/1.1\r\nHost: example.com\r\n\r\n" | /usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf -1</code></li>
+	</ul>
+</div>
+
+
+<fieldset class="collapsible collapsed hide-when-print">
+  <legend onclick="toggleFieldset(this);" class="icon icon-collapsed">Files (0)</legend>
+  <div style="display: none;">
+
+  
+
+</div>
+</fieldset>
+
+<p class="wiki-update-info">
+    Updated by <a class="user active" href="/users/10519">gstrauss</a> <a title="2024-06-21 16:10" href="/projects/lighttpd/activity?from=2024-06-21">4 months</a> ago
+    · <a href="/projects/lighttpd/wiki/InstallFromSource/history">38 revisions</a>
+</p>
+
+
+
+
+
+        
+        <div style="clear:both;"></div>
+    </div>
+</div>
+<div id="footer">
+    Powered by <a target="_blank" rel="noopener" href="https://www.redmine.org/">Redmine</a> &copy; 2006-2023 Jean-Philippe Lang
+</div>
+
+<div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+<div id="ajax-modal" style="display:none;"></div>
+
+</div>
+
+</body>
+</html>

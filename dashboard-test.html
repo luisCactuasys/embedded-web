@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LED Brightness Control</title>
+</head>
+<body>
+    <h1>Control LED Brightness</h1>
+
+    <!-- Slider to adjust brightness (0-100%) -->
+    <form method="GET" action="/cgi-bin/change-setting.py">
+        <label for="brightness">Set Brightness:</label>
+        <input type="range" id="brightness" name="brightness" min="0" max="100" value="50" oninput="this.nextElementSibling.value = this.value">
+        <output>50</output>%
+        <br><br>
+        <button type="submit">Apply</button>
+    </form>
+
+    <div>
+        <h2>Current Status</h2>
+        <p>LED Brightness: <span id="status">Unknown</span></p>
+    </div>
+</body>
+</html>
