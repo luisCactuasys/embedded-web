@@ -8,9 +8,9 @@ import time
 import requests  # Import the requests library for HTTP communication
 
 # Define the log file path
-log_file = "/home/pi/web-lighttpd/cgi-bin/settings.log"
+log_file = "/home/pi/web-lighttpd/embedded-web/cgi-bin/settings.log"
 
-NOTIFY_SERVER_URL = "http://192.168.100.139:5000/notify"  # Replace with the actual server URL
+NOTIFY_SERVER_URL = "https://192.168.100.139:5000/notify"  # Replace with the actual server URL
 
 
 # Function to log events
