@@ -30,7 +30,8 @@ def pwm_control(duty_cycle):
 # Function to notify another server of the updated duty cycle
 def notify_other_server(duty_cycle):
     try:
-        response = requests.post(NOTIFY_SERVER_URL, json={"duty_cycle": duty_cycle})
+        headers = {"x-api-key": "my-secret-api-key"}  # Add the API key here
+        response = requests.post(NOTIFY_SERVER_URL, json={"duty_cycle": duty_cycle}, headers=headers, verify='/home/pi/web-lighttpd/embedded-web/cgi-bin/cert.pem')
         if response.status_code == 200:
             print(f"Successfully notified server with duty cycle: {duty_cycle}")
         else:

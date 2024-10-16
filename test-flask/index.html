@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duty Cycle Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="range"] {
+            width: 300px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Duty Cycle Control</h1>
+    <div class="container">
+        <label for="dutyCycle">Adjust Duty Cycle (0-100):</label>
+        <input type="range" id="dutyCycle" name="dutyCycle" min="0" max="100" value="50" oninput="updateValue(this.value)">
+        <span id="dutyCycleValue">50</span>%
+    </div>
+
+    <button onclick="sendDutyCycle()">Update Duty Cycle</button>
+
+    <p id="responseMessage"></p>
+
+    <script>
+        let dutyCycle = 50;
+
+        // Update the displayed value of the range input
+        function updateValue(val) {
+            document.getElementById('dutyCycleValue').textContent = val;
+            dutyCycle = val;
+        }
+
+        // Send the updated duty cycle to the Flask server
+        function sendDutyCycle() {
+            fetch('/notify', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-api-key': 'my-secret-api-key'  // Add your API key here
+                },
+                body: JSON.stringify({ "duty_cycle": parseInt(dutyCycle) })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseMessage').textContent = data.message;
+            })
+            .catch(error => {
+                document.getElementById('responseMessage').textContent = 'Error updating duty cycle';
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
