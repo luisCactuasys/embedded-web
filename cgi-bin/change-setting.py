@@ -10,7 +10,7 @@ import requests  # Import the requests library for HTTP communication
 # Define the log file path
 log_file = "/home/pi/web-lighttpd/embedded-web/cgi-bin/settings.log"
 
-NOTIFY_SERVER_URL = "https://192.168.100.139:5000/notify"  # Replace with the actual server URL
+NOTIFY_SERVER_URL = "https://192.168.1.104:5000/notify"  # Replace with the actual server URL
 
 
 # Function to log events
@@ -30,8 +30,7 @@ def pwm_control(duty_cycle):
 # Function to notify another server of the updated duty cycle
 def notify_other_server(duty_cycle):
     try:
-        headers = {"x-api-key": "my-secret-api-key"}  # Add the API key here
-        response = requests.post(NOTIFY_SERVER_URL, json={"duty_cycle": duty_cycle}, headers=headers, verify='/home/pi/web-lighttpd/embedded-web/cgi-bin/cert.pem')
+        response = requests.post(NOTIFY_SERVER_URL, json={"duty_cycle": duty_cycle}, verify=False)
         if response.status_code == 200:
             print(f"Successfully notified server with duty cycle: {duty_cycle}")
         else:
