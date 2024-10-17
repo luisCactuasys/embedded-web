@@ -7,8 +7,10 @@ import threading
 import time
 import requests  # Import the requests library for HTTP communication
 
-# Define the log file path
-log_file = "/home/pi/web-lighttpd/embedded-web/cgi-bin/settings.log"
+
+# Get the directory of the script and build relative paths
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+log_file = os.path.join(BASE_DIR, 'settings.log')
 
 NOTIFY_SERVER_URL = "https://192.168.1.104:5000/notify"  # Replace with the actual server URL
 
