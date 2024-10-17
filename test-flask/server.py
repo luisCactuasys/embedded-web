@@ -3,9 +3,14 @@ import os
 import datetime
 import time
 
-# Define the log file path
-log_file = "/home/luiscarlos/workspace/tux100/BBB_web/embedded-web/test-flask/from-rasp.log"
 
+# Get the directory where this script is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the paths relative to the script's location
+cert_file = os.path.join(BASE_DIR, 'cert.pem')
+key_file = os.path.join(BASE_DIR, 'key.pem')
+log_file = os.path.join(BASE_DIR, 'from-rasp.log')
 
 app = Flask(__name__)
 
@@ -95,5 +100,5 @@ def notify():
 
 # Start the server on port 5000 (accessible from any IP)
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, ssl_context=('cert.pem', 'key.pem'))
+    app.run(host='0.0.0.0', port=5000, ssl_context=(cert_file, key_file))
 
