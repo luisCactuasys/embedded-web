@@ -4,7 +4,7 @@ import datetime
 import time
 
 # Define the log file path
-log_file = "/home/luiscarlos/Documents/dev/web-dev/from-rasp.log"
+log_file = "/home/luiscarlos/workspace/tux100/BBB_web/embedded-web/test-flask/from-rasp.log"
 
 
 app = Flask(__name__)
