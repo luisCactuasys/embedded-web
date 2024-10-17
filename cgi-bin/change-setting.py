@@ -11,6 +11,7 @@ import requests  # Import the requests library for HTTP communication
 # Get the directory of the script and build relative paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 log_file = os.path.join(BASE_DIR, 'settings.log')
+cert_file = os.path.join(BASE_DIR, 'cert.pem')
 
 NOTIFY_SERVER_URL = "https://192.168.1.104:5000/notify"  # Replace with the actual server URL
 
@@ -32,12 +33,15 @@ def pwm_control(duty_cycle):
 # Function to notify another server of the updated duty cycle
 def notify_other_server(duty_cycle):
     try:
-        response = requests.post(NOTIFY_SERVER_URL, json={"duty_cycle": duty_cycle}, verify=False)
+        response = requests.post(NOTIFY_SERVER_URL, json={"duty_cycle": duty_cycle}, verify=cert_file)
         if response.status_code == 200:
+            log_event(f"Successfully notified server with duty cycle: {duty_cycle}")
             print(f"Successfully notified server with duty cycle: {duty_cycle}")
         else:
+            log_event(f"Error setting up GPIO value: {e}")
             print(f"Failed to notify server. Status code: {response.status_code}")
     except Exception as e:
+        log_event(f"Error notifying server: {str(e)}")
         print(f"Error notifying server: {str(e)}")
 
 

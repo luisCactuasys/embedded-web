@@ -190,3 +190,39 @@
 2024-10-17 11:07:50 - Setting changed to: Brightness set to 78%
 2024-10-17 11:38:36 - Setting changed to: Brightness set to 5%
 2024-10-17 12:05:16 - Setting changed to: Brightness set to 30%
+2024-10-17 12:29:06 - Setting changed to: Brightness set to 22%
+2024-10-17 12:29:23 - Setting changed to: Brightness set to 76%
+2024-10-17 12:34:34 - Setting changed to: Brightness set to 25%
+2024-10-17 12:38:36 - Setting changed to: Brightness set to 56%
+2024-10-17 12:38:41 - Setting changed to: Brightness set to 1%
+2024-10-17 13:56:01 - Setting changed to: Brightness set to 1%
+2024-10-17 13:56:04 - Setting changed to: Brightness set to 11%
+2024-10-17 14:48:44 - Setting changed to: Brightness set to 78%
+2024-10-17 14:52:11 - Setting changed to: Brightness set to 25%
+2024-10-17 15:01:08 - Setting changed to: Brightness set to 50%
+2024-10-17 15:01:25 - Setting changed to: Brightness set to 9%
+2024-10-17 15:02:08 - Setting changed to: Brightness set to 52%
+2024-10-17 15:07:21 - Setting changed to: Brightness set to 52%
+2024-10-17 15:07:32 - Setting changed to: Brightness set to 17%
+2024-10-17 15:10:02 - Setting changed to: Error notifying server: HTTPSConnectionPool(host='192.168.1.104', port=5000): Max retries exceeded with url: /notify (Caused by SSLError(CertificateError("hostname '192.168.1.104' doesn't match either of 'my-embedded-board.local', 'another-alias.local'")))
+2024-10-17 15:10:02 - Setting changed to: Brightness set to 50%
+2024-10-17 15:17:19 - Setting changed to: Error notifying server: HTTPSConnectionPool(host='192.168.1.104', port=5000): Max retries exceeded with url: /notify (Caused by SSLError(CertificateError("hostname '192.168.1.104' doesn't match 'luiscarlos.local'")))
+2024-10-17 15:17:19 - Setting changed to: Brightness set to 18%
+2024-10-17 15:19:30 - Setting changed to: Successfully notified server with duty cycle: 3
+2024-10-17 15:19:30 - Setting changed to: Brightness set to 3%
+2024-10-17 15:30:49 - Setting changed to: Successfully notified server with duty cycle: 51
+2024-10-17 15:30:49 - Setting changed to: Brightness set to 51%
+2024-10-17 15:30:57 - Setting changed to: Successfully notified server with duty cycle: 38
+2024-10-17 15:30:57 - Setting changed to: Brightness set to 38%
+2024-10-17 15:32:53 - Setting changed to: Successfully notified server with duty cycle: 86
+2024-10-17 15:32:53 - Setting changed to: Brightness set to 86%
+2024-10-17 15:36:00 - Setting changed to: Successfully notified server with duty cycle: 50
+2024-10-17 15:36:00 - Setting changed to: Brightness set to 50%
+2024-10-17 15:36:19 - Setting changed to: Successfully notified server with duty cycle: 82
+2024-10-17 15:36:19 - Setting changed to: Brightness set to 82%
+2024-10-17 15:37:31 - Setting changed to: Successfully notified server with duty cycle: 47
+2024-10-17 15:37:31 - Setting changed to: Brightness set to 47%
+2024-10-17 15:39:30 - Setting changed to: Error notifying server: HTTPSConnectionPool(host='192.168.1.104', port=5000): Max retries exceeded with url: /notify (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:992)')))
+2024-10-17 15:39:30 - Setting changed to: Brightness set to 73%
+2024-10-17 16:13:44 - Setting changed to: Successfully notified server with duty cycle: 22
+2024-10-17 16:13:44 - Setting changed to: Brightness set to 22%
